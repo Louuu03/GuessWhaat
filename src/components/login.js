@@ -41,7 +41,7 @@ export const Login=(props)=>{
                 You'll be correct still if you get <span className='red big'>4</span> words of the line.<br/>
                 <br/>
                 *The game is not really available for languages other than English.<br/>
-                *The Lyrics are from Musixmatc.
+                *The Lyrics are from Musixmatch.
             </div>
             <button onClick={handleLogIn} className='spotifyLogIn'>Log in with Spotify</button>
         </div>
