@@ -1,0 +1,1 @@
+export const LYRICS_API='23f276cb525dab46554b6414b1578990';

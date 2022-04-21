@@ -1,0 +1,276 @@
+.App{
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background: rgb(146,250,232);
+    background: linear-gradient(171deg, rgba(146, 250, 233, 0.637) 0%, rgba(255, 144, 172, 0.614) 82%);
+    position:  absolute;
+    top: 0;
+}
+.title{
+    position:absolute;
+    top:0;
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    box-shadow: 3px 3px 5px rgb(144, 144, 144);
+    display: flex;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    color: rgb(251, 219, 62);
+    font-weight: 700;
+    line-height: 0px;
+    text-shadow: 4px 4px  rgb(216, 161, 253);
+}
+.user{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5%;
+    height: 57px;
+    min-width: 70px;
+    background-color: white;
+    border-left:  1px solid rgba(128, 128, 128, 0.744);
+    cursor: pointer;
+    text-align: center;
+    padding-top:13px ;
+    line-height: 20px;
+    font-weight: 350;
+}
+.user:hover{
+    box-shadow: inset 2px 2px  10px rgba(0,0,0,0.6);
+}
+
+.logInPage{
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    text-align: center;
+}
+.description{
+    margin-bottom: 20px;
+    font-family:'Quicksand', sans-serif;
+    font-weight: 600;
+}
+.spotifyLogIn{
+    height: 80px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    background-color: rgb(73, 201, 73);
+    color: white;
+    font-weight: 500;
+    border: white solid 2px;
+    box-shadow: 5px 5px  5px rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+.spotifyLogIn:hover{
+    box-shadow: inset 5px 5px  5px rgba(0,0,0,0.6);
+    animation: on 1s forwards;
+}
+
+
+
+.mainPage{
+    margin-top: 100px;
+}
+.scoreSection{
+    width: 100%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+@keyframes on {
+    0%{border-radius: 5px;color:white}
+    20%{color:rgba(255, 255, 255, 0)}
+    100%{border-radius: 100%;color:rgba(255, 255, 255, 0);height:300px}
+}
+
+
+
+
+.lyricsPage{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.lyrics{
+    width: 60%;
+    min-width: 300px;
+    min-height: 100px;
+    max-height: 400px;
+    overflow: auto;
+    font-family:'Quicksand', sans-serif;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom:30px;
+    padding: 25px;
+}
+.missing{
+    color: red;
+    font-size: 20px;
+    font-weight: 500;
+}
+.songsName{
+    line-height: 5px;
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    padding: 10px;
+    border: white solid 2px;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 5px 5px  5px rgba(0,0,0,0.6);
+    cursor: pointer;
+    background-color: rgb(69, 69, 69);    
+    margin-bottom: 20px;
+    color: white;
+}
+.songsName:hover{
+    box-shadow: inset 3px 3px  5px rgba(0,0,0,0.6);
+}
+.getLyrics,
+.showResult{
+    border-radius: 5px;
+    padding: 10px;
+    border: white solid 2px;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 5px 5px  5px rgba(0,0,0,0.6);
+    cursor: pointer;
+    background-color: rgb(227, 187, 253);    
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.getLyrics:hover{
+    box-shadow: inset 3px 3px  5px rgba(0,0,0,0.6);
+}
+
+
+.inputSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input{
+    border: solid 3px rgb(206, 134, 255);
+    padding: 5px;
+    width: 200px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.check{
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;
+    border: white solid 2px;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 5px 5px  5px rgba(0,0,0,0.6);
+    cursor: pointer;
+    background-color: rgba(146,250,232,1);    
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.check:hover{
+    box-shadow: inset 3px 3px  5px rgba(0,0,0,0.6);
+}
+.correction{
+    background-color: rgba(255, 255, 255, 0.797);
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.green{
+    color:green;
+}
+.red{
+    color: red;
+}
+.big{
+    font-size: 20px;
+    font-weight: 600;
+}
+.bigger{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+.resultPage{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.result{
+    width: 35%;
+    margin-top: 30px;
+    min-width: 300px;
+    height:auto;
+    overflow: auto;
+    font-family:'Quicksand', sans-serif;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom:30px;
+    padding: 20px;
+    color: black;
+}
+.resultSentence{
+    padding-top: 20px;
+       font-size: 40px; 
+       color: rgb(251, 219, 62);
+        font-weight: 600;
+        line-height: 40px;
+        text-shadow: 1px 1px  rgb(216, 161, 253);
+
+}
+.tryButton{
+    border-radius: 5px;
+    padding: 10px;
+    border: white solid 2px;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 5px 5px  5px rgba(0,0,0,0.6);
+    cursor: pointer;
+    background-color: rgb(227, 187, 253);    
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+@media only screen and (max-width:500px) {
+    .title{
+        height: 50px;
+    }
+    h1{
+        font-size: 30px;
+        line-height: 10px;
+    }
+    .user{
+        font-size: 10px;
+        height: 37px;
+        line-height: 15px;
+        width: 10px;
+        min-width: 50px;
+    }
+}
