@@ -193,7 +193,16 @@ h2{
     width: 200px;
     margin-bottom: 10px;
     border-radius: 5px;
+    font-size: 0;
 }
+span{
+    display: inline-block;
+    font-size: 20px;
+}
+.space{
+    padding: 2px;
+}
+
 .green{
     color:green;
 }

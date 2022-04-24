@@ -9,7 +9,7 @@ export const StatusContext=React.createContext();
 
 function App() {
   const spotify="https://accounts.spotify.com/authorize?";
-  const redirect_uri='https://guesswhaat.netlify.app';
+  const redirect_uri='http://localhost:3000/';
   const clientID='6fbde934ca6445a285096b84a31b160d';
   const scope=['user-read-recently-played','user-follow-read','user-top-read','playlist-read-private','user-read-email','user-read-private'];
   const AllScopes=scope.join('%20'); 

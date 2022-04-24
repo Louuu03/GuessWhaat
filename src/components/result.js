@@ -16,11 +16,11 @@ export const Result=(props)=>{
 
     useEffect(()=>{
         if(score===0){
-            setResult('Ahhhh, are you really listening to your songs?')
+            setResult('Ahhhh, were you really listening to your songs?')
         }else if(score===1){
             setResult('Can you sing your fav songs?')
         }else if(score===2){
-            setResult('I guess your brain is the size just as golden fish...')
+            setResult('I guess your brain is just the size of a fly...')
         }else if(score===3){
             setResult('Could have been better!')
         }else if(score===4){
