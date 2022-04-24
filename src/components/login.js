@@ -6,8 +6,6 @@ export const Login=(props)=>{
     const loginWeb=props.loginWeb;
     const data=window.location.href.match(/access_token=([^&]*)/);
     const navigate=useNavigate();
-    const [isLoading, setIsLoading]=useState(true);
-
     useEffect(()=>{
          if(data){
         const accessToken=data[1];
@@ -27,32 +25,23 @@ export const Login=(props)=>{
         window.location.href=loginWeb;
     }
 
-    useEffect(()=>{
-        setIsLoading(false);
-        console.log('fini');
-    },[])
-
-
     return(
         <div className='logInPage'>
-            
-            {isLoading?(<div className='description'></div>):
-                (<div> <div className='description'>
+                <div className='description'>
                 <h2>This is a song guessing game.</h2>
-                After you log in to Spotify,<br/> 
-                we will get your <span className='red big'>top 20</span> Songs.<br/>
+                We will get your <span className='red big'>top 20</span> songs from spotify.<br/>
                 The game will randomly get one of the songs,<br/>
                 and randomly choose a line of the lyrics.<br/>
-                Try your best to guess the lyrics of your favorite songs!<br/>
-                <br/>
-                Your answer doesn't need to be exact same as the lyrics.<br/>
+                <h3>Try your best to guess the lyrics of your favorite songs!</h3>
                 You'll be correct still if you get <span className='red big'>4</span> words of the line.<br/>
                 <br/>
+                <div className='small'>
                 *The game is not really available for languages other than English.<br/>
                 *The Lyrics are from Musixmatch.
-            </div>
-            <button onClick={handleLogIn} className='spotifyLogIn'>Log in with Spotify</button></div>
-            )}
+                </div>
+                
+                </div>
+            <button onClick={handleLogIn} className='spotifyLogIn'>Log in with Spotify</button>
         </div>
     )
 }
