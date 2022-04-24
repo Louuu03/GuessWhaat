@@ -16,4 +16,3 @@ You'll be correct still if you get 4 words of the line.
 ## Technologies
 
 Using React, Spotify API and Musixmatch API.
-

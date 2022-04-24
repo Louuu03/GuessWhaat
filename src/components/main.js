@@ -13,7 +13,6 @@ export const Main=(stat)=>{
     const [artists, setArtists]=useState([]);
     const [songs, setSongs]=useState([]);
     
-
     const getData= async ()=>{
         
         try{
@@ -41,9 +40,11 @@ export const Main=(stat)=>{
             setArtists(artist);
             setSongs(names);
     }
+
     useEffect(()=>{
         getData();
     },[token]);
+
     return(
         <div className="mainPage">
             <Score  />

@@ -2,17 +2,16 @@ import React, {useContext, useState} from "react";
 import './App.css';
 import axios from "axios";
 import { Input } from "./input";
-import { StatusContext } from "./App";
 import { useNavigate } from "react-router";
 import { LYRICS_API } from "./keys";
+import { StatusContext } from "./App";
 
-export const Lyrics=(props)=>{
 
-
+export const Lyrics= (props)=>{
     const {stat, setStat}=useContext(StatusContext);
     const artists=props.artists;
     const songs=props.songs;
-    const URI='http://api.musixmatch.com/ws/1.1/';
+    const URI='https://stark-plateau-04457.herokuapp.com/http://api.musixmatch.com/ws/1.1/';
     let exactArtist='';
     let exactSong='';
 
@@ -70,13 +69,10 @@ export const Lyrics=(props)=>{
         }
         setLoading(false);
     }
-console.log(loading);
-
 
     const getLyrics = async()=>{ 
         setLoading(true);
-        setInput('')
-
+        setInput('');
         let num=Math.floor(Math.random()*artists.length);
         let artist=artists[num];
         let song=songs[num];
@@ -85,16 +81,15 @@ console.log(loading);
         let artistString=[];
         let songString=[];
 
-
         cleanData(artist,artistString,0);
         cleanData(song,songString,1);
-
     
         try{
             const res=await axios.get(URI+'matcher.lyrics.get?apikey=23f276cb525dab46554b6414b1578990&q_track='+exactSong+'&q_artist='+exactArtist,{
                 headers:{
                     Authorization:'Bearer '+ LYRICS_API,
-                    
+                   'Content-Type': 'application/json',
+                   'Access-Control-Allow-Origin' : "*",
                 }
             }
             );
@@ -131,10 +126,6 @@ console.log(loading);
         }catch(err){
             console.log(err);
         }
-        
-
-
-
     }
 
     

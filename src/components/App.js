@@ -9,7 +9,7 @@ export const StatusContext=React.createContext();
 
 function App() {
   const spotify="https://accounts.spotify.com/authorize?";
-  const redirect_uri='http://localhost:3000/';
+  const redirect_uri='https://guesswhaat.netlify.app';
   const clientID='6fbde934ca6445a285096b84a31b160d';
   const scope=['user-read-recently-played','user-follow-read','user-top-read','playlist-read-private','user-read-email','user-read-private'];
   const AllScopes=scope.join('%20'); 
@@ -22,14 +22,13 @@ function App() {
     window.location.href=loginWeb;
   }
   const user=<div className='user' onClick={handleChangeUser}>Change<br/>User</div>;
-
-
+  
   return (
-    <div className="App">
+    <div className="App" onLoad={()=>alert('loading')}> 
       <div className='title'>
         <h1>Guess Whatt!!!</h1>
-       { window.location.href!=="http://localhost:3000/"?user:""}
-        </div>
+       { window.location.href!=="https://guesswhaat.netlify.app"?user:""}
+      </div>
       <BrowserRouter>
       <StatusContext.Provider value={{score, setScore, stat, setStat}}>
         <Routes>

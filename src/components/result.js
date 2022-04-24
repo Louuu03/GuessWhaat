@@ -14,7 +14,6 @@ export const Result=(props)=>{
         setScore(0);
     }
 
-
     useEffect(()=>{
         if(score===0){
             setResult('Ahhhh, are you really listening to your songs?')
@@ -29,9 +28,6 @@ export const Result=(props)=>{
         }else if(score===5){
             setResult('Wow, not half bad!')
         }
-
-
-
     },[stat])   
 
     return(

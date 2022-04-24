@@ -9,6 +9,7 @@
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "lyrics-finder": "^21.7.0",
+    "lyrics-parse": "^1.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router": "^6.3.0",
